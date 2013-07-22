@@ -1,0 +1,43 @@
+{
+  "name": "grunt-spriter",
+  "version": "0.1.0",
+  "description": "Analyzes your existing CSS files and either generates spritesheets or inlines them using data URIs and outputs an updated CSS stylesheet. Based on Spriter.",
+  "homepage": "https://github.com/nDmitry/grunt-spriter",
+  "bugs": "https://github.com/nDmitry/grunt-spriter/issues",
+  "author": {
+    "name": "Dmitry Nikitenko",
+    "email": "dima.nikitenko@gmail.com",
+    "url": "https://github.com/nDmitry"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+      "node": ">= 0.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nDmitry/grunt-spriter"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "dependencies": {
+    "spriter": "~0.2.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.2.0",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-copy": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}

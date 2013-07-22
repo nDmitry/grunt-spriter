@@ -1,0 +1,20 @@
+.icons__icon {
+  width: 48px;
+  height: 48px
+}
+
+.icons__icon--cheshireCat {
+  background: url(../i/sprite.png) no-repeat
+}
+
+.icons__icon--geekZombie {
+  background: url(../i/sprite.png) -48px 0 no-repeat
+}
+
+.icons__icon--ninjaGhost {
+  background: url(../i/sprite.png) 0 -48px no-repeat
+}
+
+.icons__icon--pumpkin {
+  background: url(../i/sprite.png) -48px -48px no-repeat
+}

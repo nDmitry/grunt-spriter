@@ -1,0 +1,20 @@
+.icons__icon {
+    width: 48px;
+    height: 48px;
+}
+
+.icons__icon--cheshireCat {
+    background-image: url('../i/icons/cheshire_cat.png');
+}
+
+.icons__icon--geekZombie {
+    background-image: url('../i/icons/geek_zombie.png');
+}
+
+.icons__icon--ninjaGhost {
+    background-image: url('../i/icons/ninja_ghost.png');
+}
+
+.icons__icon--pumpkin {
+    background-image: url('../i/icons/pumpkin.png');
+}
