@@ -1,4 +1,4 @@
-# grunt-spriter
+# grunt-spriter [![Build Status](https://travis-ci.org/nDmitry/grunt-spriter.png?branch=master)](https://travis-ci.org/nDmitry/grunt-spriter)
 
 Analyzes your existing CSS files and either generates highly optimized sprite sheets using a growing binary tree bin-packing algorithm or inlines them using data URIs and outputs an updated CSS stylesheet.
 
