@@ -10,13 +10,16 @@
 
 module.exports = function (grunt) {
 
-    var spriter = require('spriter');
+    var path = require('path'),
+        url = require('url'),
+        spriter = require('spriter');
 
     grunt.registerMultiTask('spriter', 'Analyzes your existing CSS files and either generates spritesheets or inlines' +
         ' them using data URIs and outputs an updated CSS stylesheet. Based on Spriter.', function () {
 
         var options = this.options({
-            target: 'images/generated/sprites.png',
+            targetPath: 'images/generated/',
+            spriteName: 'sprite',
             source: '',
             filter: '',
             optimize: true,
@@ -44,8 +47,33 @@ module.exports = function (grunt) {
                 }
             ).join('');
 
-            // Write the destination file.
-            grunt.file.write(f.dest, spriter(src, options.source, options.target, options.filter, options.optimize, options.inline));
+            options.source = (options.source === '') ? path.dirname(f.dest) : options.source;
+
+            // Returns a target path to sprite file.
+            function getTarget (filter) {
+                var spriteName, targetDir, target;
+
+                spriteName = (filter === '') ? options.spriteName : path.basename(url.parse(filter, false).pathname);
+                targetDir = path.relative(options.source, options.targetPath);
+                target = path.join(targetDir, spriteName + '.png');
+
+                return target;
+            }
+
+            function adapter (source, target, filter, optimize, inline) {
+                var result = spriter(src, source, target, filter, optimize, inline);
+                grunt.file.write(f.dest, result);
+
+                return result;
+            }
+
+            if (Array.isArray(options.filter)) {
+                options.filter.forEach(function (filter) {
+                    src = adapter(options.source, getTarget(filter), filter, options.optimize, options.inline);
+                });
+            } else {
+                adapter(options.source, getTarget(options.filter), options.filter, options.optimize, options.inline);
+            }
 
             // Print a success message.
             grunt.log.writeln('File "' + f.dest + '" created.');

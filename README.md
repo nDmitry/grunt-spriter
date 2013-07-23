@@ -44,11 +44,11 @@ grunt.initConfig({
 
 ### Options
 
-#### options.target
+#### options.targetPath
 Type: `String`
-Default value: `images/generated/sprites.png`
+Default value: `images/generated/`
 
-Target path relative to input (required unless generating inline).
+Sprite's output path relative to destination or `options.source` path (required unless generating inline).
 
 #### options.source
 Type: `String`
@@ -57,10 +57,10 @@ Default value: no
 Source path relative to input.
 
 #### options.filter
-Type: `String`
+Type: `String` or `Array`
 Default value: no
 
-Source url filter (e.g: images/sprites).
+Source url(s) filter (e.g: images/sprites).
 
 #### options.inline
 Type: `Boolean`
@@ -74,18 +74,26 @@ Default value: `true`
 
 Disable rule optimization.
 
+#### options.spriteName
+Type: `String`
+Default value: `sprite`
+
+Name of the output sprite sheet file (used if filter isn't specified).
+
 ### Usage Examples
+
+Outputs two sprites (i/icons.png and i/buttons.png):
 
 ```js
 grunt.initConfig({
   spriter: {
     dist: {
       options: {
-        target: '../i/sprite.png',
-        source: 'out/css'
+        targetPath: 'i/',
+        filter: ['../i/icons/', '../i/buttons/']
       },
-      src: 'out/css/main.css',
-      dest: 'out/css/main.css'
+      src: 'css/main.css',
+      dest: 'css/main.css'
     }
   }
 })

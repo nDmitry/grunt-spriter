@@ -38,8 +38,7 @@ module.exports = function (grunt) {
         // Configuration to be run (and then tested).
         spriter: {
             options: {
-                target: '../i/sprite.png',
-                source: 'tmp/css'
+                targetPath: 'tmp/i/'
             },
             'default': {
                 src: 'test/fixtures/css/icons.css',
@@ -58,6 +57,13 @@ module.exports = function (grunt) {
                 },
                 src: '<%= spriter.default.src %>',
                 dest: 'tmp/css/icons.inline.css'
+            },
+            filter: {
+                options: {
+                    filter: ['../i/icons/vacation/', '../i/icons/halloween/']
+                },
+                src: '<%= spriter.default.src %>',
+                dest: 'tmp/css/icons.filter.css'
             }
         },
 
