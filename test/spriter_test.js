@@ -27,7 +27,7 @@ exports.spriter = {
         test.expect(1);
 
         var actual = grunt.file.read('tmp/css/icons.default.css');
-        var expected = grunt.file.read('test/expected/icons.default.css');
+        var expected = grunt.file.read('test/expected/css/icons.default.css');
         test.equal(actual, expected, 'should generate sprite sheet with optimization and without inlining.');
 
         test.done();
@@ -36,7 +36,7 @@ exports.spriter = {
         test.expect(1);
 
         var actual = grunt.file.read('tmp/css/icons.no-optimization.css');
-        var expected = grunt.file.read('test/expected/icons.no-optimization.css');
+        var expected = grunt.file.read('test/expected/css/icons.no-optimization.css');
         test.equal(actual, expected, 'should generate sprite sheet without optimization.');
 
         test.done();
@@ -45,7 +45,7 @@ exports.spriter = {
         test.expect(1);
 
         var actual = grunt.file.read('tmp/css/icons.inline.css');
-        var expected = grunt.file.read('test/expected/icons.inline.css');
+        var expected = grunt.file.read('test/expected/css/icons.inline.css');
         test.equal(actual, expected, 'should generate sprite sheet with inlining.');
 
         test.done();
@@ -54,8 +54,26 @@ exports.spriter = {
         test.expect(1);
 
         var actual = grunt.file.read('tmp/i/sprite.png');
-        var expected = grunt.file.read('test/expected/sprite.png');
-        test.equal(actual, expected, 'should generate sprite sheet file.');
+        var expected = grunt.file.read('test/expected/sprites/sprite.png');
+        test.equal(actual, expected, 'should generate common sprite sheet file.');
+
+        test.done();
+    },
+    halloweenSprite: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/i/halloween.png');
+        var expected = grunt.file.read('test/expected/sprites/halloween.png');
+        test.equal(actual, expected, 'should generate "halloween" sprite sheet file.');
+
+        test.done();
+    },
+    vacationSprite: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/i/vacation.png');
+        var expected = grunt.file.read('test/expected/sprites/vacation.png');
+        test.equal(actual, expected, 'should generate "vacation" sprite sheet file.');
 
         test.done();
     }

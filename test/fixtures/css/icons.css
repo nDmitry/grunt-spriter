@@ -1,20 +1,36 @@
-.icons__icon {
+.halloween__icon, .vacation__icon {
     width: 48px;
     height: 48px;
 }
 
-.icons__icon--cheshireCat {
-    background-image: url('../i/icons/cheshire_cat.png');
+.halloween__icon--cheshireCat {
+    background-image: url('../i/icons/halloween/cheshire_cat.png');
 }
 
-.icons__icon--geekZombie {
-    background-image: url('../i/icons/geek_zombie.png');
+.halloween__icon--geekZombie {
+    background-image: url('../i/icons/halloween/geek_zombie.png');
 }
 
-.icons__icon--ninjaGhost {
-    background-image: url('../i/icons/ninja_ghost.png');
+.halloween__icon--ninjaGhost {
+    background-image: url('../i/icons/halloween/ninja_ghost.png');
 }
 
-.icons__icon--pumpkin {
-    background-image: url('../i/icons/pumpkin.png');
+.halloween__icon--pumpkin {
+    background-image: url('../i/icons/halloween/pumpkin.png');
+}
+
+.vacation__icon--beachChair {
+    background-image: url('../i/icons/vacation/beach_chair.png');
+}
+
+.vacation__icon--cocktail {
+    background-image: url('../i/icons/vacation/cocktail.png');
+}
+
+.vacation__icon--flippers {
+    background-image: url('../i/icons/vacation/flippers.png');
+}
+
+.vacation__icon--surfboard {
+    background-image: url('../i/icons/vacation/surfboard.png');
 }
