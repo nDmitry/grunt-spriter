@@ -11,7 +11,6 @@
 module.exports = function (grunt) {
 
     var path = require('path'),
-        url = require('url'),
         spriter = require('spriter');
 
     grunt.registerMultiTask('spriter', 'Analyzes your existing CSS files and either generates spritesheets or inlines' +
@@ -51,11 +50,16 @@ module.exports = function (grunt) {
 
             // Returns a target path to sprite file.
             function getTarget (filter) {
-                var spriteName, targetDir, target;
+                var spriteName, target;
 
-                spriteName = (filter === '') ? options.spriteName : path.basename(url.parse(filter, false).pathname);
-                targetDir = path.relative(options.source, options.targetPath);
-                target = path.join(targetDir, spriteName + '.png');
+                spriteName = (filter === '') ? options.spriteName : path.basename(filter);
+
+                // Fix for Node 0.8 https://github.com/joyent/node/pull/4536
+                if (spriteName.lastIndexOf('/') !== -1) {
+                    spriteName = spriteName.slice(0, -1);
+                }
+
+                target = path.join(path.relative(options.source, options.targetPath), spriteName + '.png');
 
                 return target;
             }
