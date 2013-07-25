@@ -1,6 +1,6 @@
 {
   "name": "grunt-spriter",
-  "version": "0.2.20130723",
+  "version": "0.2.20130725",
   "description": "Analyzes your existing CSS files and either generates spritesheets or inlines them using data URIs and outputs an updated CSS stylesheet. Based on Spriter.",
   "homepage": "https://github.com/nDmitry/grunt-spriter",
   "bugs": "https://github.com/nDmitry/grunt-spriter/issues",
