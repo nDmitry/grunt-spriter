@@ -59,12 +59,30 @@ exports.spriter = {
 
         test.done();
     },
+    sprite2x: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/i/sprite@2x.png');
+        var expected = grunt.file.read('test/expected/sprites/sprite@2x.png');
+        test.equal(actual, expected, 'should generate common @2x sprite sheet file.');
+
+        test.done();
+    },
     halloweenSprite: function (test) {
         test.expect(1);
 
         var actual = grunt.file.read('tmp/i/halloween.png');
         var expected = grunt.file.read('test/expected/sprites/halloween.png');
         test.equal(actual, expected, 'should generate "halloween" sprite sheet file.');
+
+        test.done();
+    },
+    halloweenSprite2x: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/i/halloween@2x.png');
+        var expected = grunt.file.read('test/expected/sprites/halloween@2x.png');
+        test.equal(actual, expected, 'should generate @2x "halloween" sprite sheet file.');
 
         test.done();
     },
