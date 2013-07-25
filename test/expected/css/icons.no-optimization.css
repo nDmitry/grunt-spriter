@@ -43,3 +43,26 @@
   background-image: url(../i/sprite.png);
   background-position: -48px -96px
 }
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi) {
+  .halloween__icon--cheshireCat {
+    background-image: url(../i/sprite@2x.png);
+    background-position: 0 0
+  }
+
+  .halloween__icon--geekZombie {
+    background-image: url(../i/sprite@2x.png);
+    background-position: -48px 0
+  }
+
+  .halloween__icon--ninjaGhost {
+    background-image: url(../i/sprite@2x.png);
+    background-position: -74px 0
+  }
+
+  .halloween__icon--pumpkin {
+    background-image: url(../i/sprite@2x.png);
+    background-position: 0 -48px
+  }
+}

@@ -34,3 +34,22 @@
 .vacation__icon--surfboard {
     background-image: url('../i/icons/vacation/surfboard.png');
 }
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi) {
+    .halloween__icon--cheshireCat {
+        background-image: url('../i/icons/halloween/cheshire_cat@2x.png');
+    }
+
+    .halloween__icon--geekZombie {
+        background-image: url('../i/icons/halloween/geek_zombie@2x.png');
+    }
+
+    .halloween__icon--ninjaGhost {
+        background-image: url('../i/icons/halloween/ninja_ghost@2x.png');
+    }
+
+    .halloween__icon--pumpkin {
+        background-image: url('../i/icons/halloween/pumpkin@2x.png');
+    }
+}
