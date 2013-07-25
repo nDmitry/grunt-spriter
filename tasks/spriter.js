@@ -25,6 +25,29 @@ module.exports = function (grunt) {
             inline: false
         });
 
+        // Returns a target path to sprite file.
+        function getTarget (filter) {
+            var spriteName, target;
+
+            spriteName = (filter === '') ? options.spriteName : path.basename(filter);
+
+            // Fix for Node 0.8 https://github.com/joyent/node/pull/4536
+            if (spriteName.lastIndexOf('/') !== -1) {
+                spriteName = spriteName.slice(0, -1);
+            }
+
+            target = path.join(path.relative(options.source, options.targetPath), spriteName + '.png');
+
+            return target;
+        }
+
+        function adapter (src, dest, source, target, filter, optimize, inline) {
+            var result = spriter(src, source, target, filter, optimize, inline);
+            grunt.file.write(dest, result);
+
+            return result;
+        }
+
         // Iterate over all specified file groups.
         this.files.forEach(function (f) {
 
@@ -48,35 +71,12 @@ module.exports = function (grunt) {
 
             options.source = (options.source === '') ? path.dirname(f.dest) : options.source;
 
-            // Returns a target path to sprite file.
-            function getTarget (filter) {
-                var spriteName, target;
-
-                spriteName = (filter === '') ? options.spriteName : path.basename(filter);
-
-                // Fix for Node 0.8 https://github.com/joyent/node/pull/4536
-                if (spriteName.lastIndexOf('/') !== -1) {
-                    spriteName = spriteName.slice(0, -1);
-                }
-
-                target = path.join(path.relative(options.source, options.targetPath), spriteName + '.png');
-
-                return target;
-            }
-
-            function adapter (source, target, filter, optimize, inline) {
-                var result = spriter(src, source, target, filter, optimize, inline);
-                grunt.file.write(f.dest, result);
-
-                return result;
-            }
-
             if (Array.isArray(options.filter)) {
                 options.filter.forEach(function (filter) {
-                    src = adapter(options.source, getTarget(filter), filter, options.optimize, options.inline);
+                    src = adapter(src, f.dest, options.source, getTarget(filter), filter, options.optimize, options.inline);
                 });
             } else {
-                adapter(options.source, getTarget(options.filter), options.filter, options.optimize, options.inline);
+                adapter(src, f.dest, options.source, getTarget(options.filter), options.filter, options.optimize, options.inline);
             }
 
             // Print a success message.
