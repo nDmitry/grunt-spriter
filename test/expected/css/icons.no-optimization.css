@@ -1,68 +1,68 @@
 .halloween__icon,
 .vacation__icon {
   width: 48px;
-  height: 48px
+  height: 48px;
 }
 
 .halloween__icon--cheshireCat {
   background-image: url(../i/sprite.png);
-  background-position: 0 0
+  background-position: 0 0;
 }
 
 .halloween__icon--geekZombie {
   background-image: url(../i/sprite.png);
-  background-position: -48px 0
+  background-position: -48px 0;
 }
 
 .halloween__icon--ninjaGhost {
   background-image: url(../i/sprite.png);
-  background-position: 0 -48px
+  background-position: 0 -48px;
 }
 
 .halloween__icon--pumpkin {
   background-image: url(../i/sprite.png);
-  background-position: -48px -48px
+  background-position: -48px -48px;
 }
 
 .vacation__icon--beachChair {
   background-image: url(../i/sprite.png);
-  background-position: -96px 0
+  background-position: -96px 0;
 }
 
 .vacation__icon--cocktail {
   background-image: url(../i/sprite.png);
-  background-position: -96px -48px
+  background-position: -96px -48px;
 }
 
 .vacation__icon--flippers {
   background-image: url(../i/sprite.png);
-  background-position: 0 -96px
+  background-position: 0 -96px;
 }
 
 .vacation__icon--surfboard {
   background-image: url(../i/sprite.png);
-  background-position: -48px -96px
+  background-position: -48px -96px;
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5),
 (min-resolution: 144dpi) {
   .halloween__icon--cheshireCat {
     background-image: url(../i/sprite@2x.png);
-    background-position: 0 0
+    background-position: 0 0;
   }
 
   .halloween__icon--geekZombie {
     background-image: url(../i/sprite@2x.png);
-    background-position: -48px 0
+    background-position: -48px 0;
   }
 
   .halloween__icon--ninjaGhost {
     background-image: url(../i/sprite@2x.png);
-    background-position: -74px 0
+    background-position: -74px 0;
   }
 
   .halloween__icon--pumpkin {
     background-image: url(../i/sprite@2x.png);
-    background-position: 0 -48px
+    background-position: 0 -48px;
   }
 }

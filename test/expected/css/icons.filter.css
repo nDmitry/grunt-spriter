@@ -1,56 +1,56 @@
 .halloween__icon,
 .vacation__icon {
   width: 48px;
-  height: 48px
+  height: 48px;
 }
 
 .halloween__icon--cheshireCat {
-  background: url(../i/halloween.png) no-repeat
+  background: url(../i/halloween.png) no-repeat;
 }
 
 .halloween__icon--geekZombie {
-  background: url(../i/halloween.png) -48px 0 no-repeat
+  background: url(../i/halloween.png) -48px 0 no-repeat;
 }
 
 .halloween__icon--ninjaGhost {
-  background: url(../i/halloween.png) 0 -48px no-repeat
+  background: url(../i/halloween.png) 0 -48px no-repeat;
 }
 
 .halloween__icon--pumpkin {
-  background: url(../i/halloween.png) -48px -48px no-repeat
+  background: url(../i/halloween.png) -48px -48px no-repeat;
 }
 
 .vacation__icon--beachChair {
-  background: url(../i/vacation.png) no-repeat
+  background: url(../i/vacation.png) no-repeat;
 }
 
 .vacation__icon--cocktail {
-  background: url(../i/vacation.png) -48px 0 no-repeat
+  background: url(../i/vacation.png) -48px 0 no-repeat;
 }
 
 .vacation__icon--flippers {
-  background: url(../i/vacation.png) 0 -48px no-repeat
+  background: url(../i/vacation.png) 0 -48px no-repeat;
 }
 
 .vacation__icon--surfboard {
-  background: url(../i/vacation.png) -48px -48px no-repeat
+  background: url(../i/vacation.png) -48px -48px no-repeat;
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5),
 (min-resolution: 144dpi) {
   .halloween__icon--cheshireCat {
-    background: url(../i/halloween@2x.png) no-repeat
+    background: url(../i/halloween@2x.png) no-repeat;
   }
 
   .halloween__icon--geekZombie {
-    background: url(../i/halloween@2x.png) -48px 0 no-repeat
+    background: url(../i/halloween@2x.png) -48px 0 no-repeat;
   }
 
   .halloween__icon--ninjaGhost {
-    background: url(../i/halloween@2x.png) -74px 0 no-repeat
+    background: url(../i/halloween@2x.png) -74px 0 no-repeat;
   }
 
   .halloween__icon--pumpkin {
-    background: url(../i/halloween@2x.png) 0 -48px no-repeat
+    background: url(../i/halloween@2x.png) 0 -48px no-repeat;
   }
 }
