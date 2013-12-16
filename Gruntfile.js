@@ -38,7 +38,7 @@ module.exports = function (grunt) {
         // Configuration to be run (and then tested).
         spriter: {
             options: {
-                targetPath: 'tmp/i/'
+                targetPath: '../i/'
             },
             'default': {
                 src: 'test/fixtures/css/icons.css',

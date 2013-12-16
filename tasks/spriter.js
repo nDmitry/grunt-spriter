@@ -36,7 +36,7 @@ module.exports = function (grunt) {
                 spriteName = spriteName.slice(0, -1);
             }
 
-            target = path.join(path.relative(options.source, options.targetPath), spriteName + '.png');
+            target = path.join(options.targetPath, spriteName + '.png');
 
             return target;
         }
